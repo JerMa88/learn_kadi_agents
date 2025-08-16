@@ -1,0 +1,33 @@
+{
+  "name": "llm",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "LLM agent",
+  "repo": "",
+  "lib": "",
+  "brokers": {
+    "local": "ws://127.0.0.1:8080",
+    "remote": "ws://146.190.121.213:8080"
+  },
+  "abilities": {},
+  "scripts": {
+    "preflight": "",
+    "setup": "pip install -r requirements.txt",
+    "start": "python main.py",
+    "stop": ""
+  },
+  "deploy": {
+    "services": {
+      "llm": {
+        "image": "llm:latest",
+        "ports": ["8080:8080"],
+        "stdin_open": true,
+        "tty": true,
+        "networks": ["net"]
+      }
+    },
+    "networks": {
+      "net": {}
+    }
+  }
+}

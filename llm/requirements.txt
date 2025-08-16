@@ -1,0 +1,6 @@
+# Python dependencies for llm
+# Add your Python package dependencies here
+requests>=2.28.0
+websockets>=10.0 
+ollama
+aiohttp
