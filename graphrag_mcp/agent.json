@@ -9,7 +9,9 @@
     "local": "ws://127.0.0.1:8080",
     "remote": "ws://146.190.121.213:8080"
   },
-  "abilities": {},
+  "abilities": {
+    "graphrag_mcp": "1.0.0"
+  },
   "scripts": {
     "preflight": "",
     "setup": "npm install",
@@ -20,10 +22,14 @@
     "services": {
       "graphrag_mcp": {
         "image": "graphrag_mcp:latest",
-        "ports": ["8080:8080"],
+        "ports": [
+          "8080:8080"
+        ],
         "stdin_open": true,
         "tty": true,
-        "networks": ["net"]
+        "networks": [
+          "net"
+        ]
       }
     },
     "networks": {
