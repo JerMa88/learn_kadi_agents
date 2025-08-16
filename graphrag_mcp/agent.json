@@ -1,0 +1,33 @@
+{
+  "name": "graphrag_mcp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A graphrag agent with code from github.com:rileylemm/graphrag_mcp.git",
+  "repo": "",
+  "lib": "",
+  "brokers": {
+    "local": "ws://127.0.0.1:8080",
+    "remote": "ws://146.190.121.213:8080"
+  },
+  "abilities": {},
+  "scripts": {
+    "preflight": "",
+    "setup": "npm install",
+    "start": "node index.js",
+    "stop": ""
+  },
+  "deploy": {
+    "services": {
+      "graphrag_mcp": {
+        "image": "graphrag_mcp:latest",
+        "ports": ["8080:8080"],
+        "stdin_open": true,
+        "tty": true,
+        "networks": ["net"]
+      }
+    },
+    "networks": {
+      "net": {}
+    }
+  }
+}

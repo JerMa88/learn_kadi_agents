@@ -1,0 +1,17 @@
+{
+  "name": "graphrag_mcp",
+  "version": "1.0.0",
+  "description": "A graphrag agent with code from github.com:rileylemm/graphrag_mcp.git",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kadi",
+    "agent"
+  ],
+  "author": "",
+  "license": "MIT"
+}
