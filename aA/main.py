@@ -35,7 +35,7 @@ def call_llm_agent(prompt):
         return data.get("response", "No response from LLM agent")
     except requests.RequestException as e:
         logger.error(f"Error calling LLM agent: {e}")
-        return "Error calling LLM agent"
+        return None
 
 class agentAAgent:
     def __init__(self):
@@ -52,12 +52,7 @@ class agentAAgent:
                 logger.error("No prompt provided. Please enter a valid prompt.")
             else:
                 response = call_llm_agent(prompt)
-                logger.info(f"Response from LLM agent: \n{response}")
-
-        # Example: Keep the agent running
-        while True:
-            logger.info("Agent is alive...")
-            await asyncio.sleep(30)
+                if response: logger.info(f"Response from LLM agent: \n{response}")
     
     async def stop(self):
         """Stop the agent gracefully"""

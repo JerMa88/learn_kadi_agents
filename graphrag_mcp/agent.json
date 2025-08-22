@@ -6,8 +6,8 @@
   "repo": "",
   "lib": "",
   "brokers": {
-    "local": "ws://127.0.0.1:8080",
-    "remote": "ws://146.190.121.213:8080"
+    "local": "ws://127.0.0.1:7923",
+    "remote": "ws://146.190.121.213:7923"
   },
   "abilities": {
     "graphrag_mcp": "1.0.0"
@@ -21,9 +21,9 @@
   "deploy": {
     "services": {
       "graphrag_mcp": {
-        "image": "graphrag_mcp:latest",
+        "image": "graphrag_mcp:1.0.0",
         "ports": [
-          "8080:8080"
+          "7923:7923"
         ],
         "stdin_open": true,
         "tty": true,
